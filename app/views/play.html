@@ -1,0 +1,21 @@
+    <div id="gameboard" data-ng-click="turn()">
+      <div id="row1" class="rw tr">
+        <div id="cell1" class="cll lt {{squares[0]}}" data-ng-click="makeMove(0)">{{squares[0]}}</div>
+        <div id="cell2" class="cll ct {{squares[1]}}" data-ng-click="makeMove(1)">{{squares[1]}}</div>
+        <div id="cell3" class="cll rt {{squares[2]}}" data-ng-click="makeMove(2)">{{squares[2]}}</div>
+      </div>
+      <div id="row2" class="rw mr">
+        <div id="cell4" class="cll lm {{squares[3]}}" data-ng-click="makeMove(3)">{{squares[3]}}</div>
+        <div id="cell5" class="cll cm {{squares[4]}}" data-ng-click="makeMove(4)">{{squares[4]}}</div>
+        <div id="cell6" class="cll rm {{squares[5]}}" data-ng-click="makeMove(5)">{{squares[5]}}</div>
+      </div>
+      <div id="row3" class="rw br">
+        <div id="cell7" class="cll lb {{squares[6]}}" data-ng-click="makeMove(6)">{{squares[6]}}</div>
+        <div id="cell8" class="cll cb {{squares[7]}}" data-ng-click="makeMove(7)">{{squares[7]}}</div>
+        <div id="cell9" class="cll rb {{squares[8]}}" data-ng-click="makeMove(8)">{{squares[8]}}</div>
+      </div>
+    </div>
+
+<h1 data-ng-show="endGame"><span class="{{mark | lowercase}}">{{mark | uppercase}}</span><span class="tickety"> You</span><span class="tackety">Won!</span></h1>
+<div id="play-btn"><a  href="#/waiting" class="large button success" data-ng-show="endGame">Play Again?!</a></div>
+<div id="play-btn"><a href="#/howTo" class="large button success" data-ng-show="endGame">How To</a></div>
